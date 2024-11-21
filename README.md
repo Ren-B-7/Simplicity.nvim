@@ -62,3 +62,5 @@ Keymaps will likely be added to the wiki later.
 
 # Why
 I have a way to select my neovim config on startup, or launch directly, sometimes you just want to go with bare bones, this is it.  
+
+[Selecting different neovim configs?](https://github.com/Ren-B-7/Complexity.nvim/blob/bc88c944b1ff2fdf332c985a083c700c6b4f472f/.zshrc#L108)
