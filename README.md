@@ -51,14 +51,14 @@ Large file support, faster file loading, completion, linting, tabs, intro window
 
 ## Position plugins\
 - [x] [mini.statusline](https://github.com/echasnovski/mini.statusline) (Lightweight and customizable statusline)  
-- [x] [mini.tabline](https://github.com/echasnovski/mini.tabline) (Minimalist tabline management)
-- [x] [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) (Git integration and signs in the editor)
+- [x] [mini.tabline](https://github.com/echasnovski/mini.tabline) (Minimalist tabline management)  
+- [x] [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) (Git integration and signs in the editor)  
 
 ## Highlighting
 - [x] [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) (Better syntax highlighting and parsing)  
 
 # Kwymaps?
-Keymaps will likely be added to the wiki later
+Keymaps will likely be added to the wiki later.  
 
 # Why
-I have a way to select my neovim config on startup, or launch directly, sometimes you just want to go with bare bones, this is it.
+I have a way to select my neovim config on startup, or launch directly, sometimes you just want to go with bare bones, this is it.  
