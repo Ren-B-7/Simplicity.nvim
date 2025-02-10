@@ -4,27 +4,19 @@ local del = vim.keymap.del
 local lsp = vim.lsp.buf
 local diagn = vim.diagnostic
 -- telescope
-local builtin = require("telescope.builtin")
 
 set("n", "<C-s>", ":w <CR>", { desc = "Save the current selected file" })
 
--- telescope keysets
-set("n", "<leader><leader>", builtin.find_files, { desc = "Find files" })
-set(
-    "n",
-    "<leader>ff",
-    "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>",
-    { desc = "Find files in all directories" }
-)
-set("n", "<leader>fg", builtin.live_grep, { desc = "Search within files" })
-set("n", "<leader>fb", builtin.buffers, { desc = "List open buffers" })
-set("n", "<leader>fh", builtin.help_tags, { desc = "Search help tags" })
-set("n", "<leader>fo", builtin.oldfiles, { desc = "Open recently used files" })
-set("n", "<leader>fc", builtin.git_commits, { desc = "Show git commits" })
-set("n", "<leader>u", "<cmd>Telescope undo<cr>", { desc = "View undo history" })
-set("n", "<leader>fs", function()
-    builtin.grep_string({ search = vim.fn.input("Grep > ") })
-end, { desc = "Search for a string in the current file" })
+-- fzf-lua keysets
+set("n", "<leader><leader>", "<cmd>FzfLua files<CR>", { desc = "List files" })
+set("n", "<leader>fg", "<cmd>FzfLua grep_cword<CR>", { desc = "Search for word under cursor" })
+set("n", "<leader>fl", "<cmd>FzfLua live_grep<CR>", { desc = "Search for word in current project" })
+set("n", "<leader>fb", "<cmd>FzfLua buffers<CR>", { desc = "Search open buffers" })
+set("n", "<leader>qf", "<cmd>FzfLua quickfix<CR>", { desc = "Quickfix list" })
+set("n", "<leader>gf", "<cmd>FzfLua git_files<CR>", { desc = "Git files" })
+set("n", "<leader>gc", "<cmd>FzfLua git_commits<CR>", { desc = "Git commits" })
+set("n", "<leader>gb", "<cmd>FzfLua git_branches<CR>", { desc = "Git branches" })
+set("n", "<leader>fc", "<cmd>FzfLua commands<CR>", { desc = "Find commands" })
 
 -- Moving and resizing windows
 set("n", "<C-Up>", ":resize -2<CR>", { desc = "Decrease window height" })
@@ -66,16 +58,16 @@ set("n", "tg", ":bprev<CR>", { desc = "Go to previous buffer" })
 set("n", "<leader>bd", "<cmd>bd!<CR>", { desc = "Close current buffer" })
 
 set(
-    { "n", "t", "v" },
-    "<leader>tv",
-    "<cmd>ToggleTerm direction=vertical<CR>",
-    { desc = "Create new vertical terminal" }
+	{ "n", "t", "v" },
+	"<leader>tv",
+	"<cmd>ToggleTerm direction=vertical<CR>",
+	{ desc = "Create new vertical terminal" }
 )
 set(
-    { "n", "t", "v" },
-    "<leader>th",
-    "<cmd>ToggleTerm direction=horizontal<CR>",
-    { desc = "Create new horizontal terminal" }
+	{ "n", "t", "v" },
+	"<leader>th",
+	"<cmd>ToggleTerm direction=horizontal<CR>",
+	{ desc = "Create new horizontal terminal" }
 )
 set({ "n", "t", "v" }, "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Create new hover terminal" })
 
@@ -107,16 +99,16 @@ set("n", "g]", diagn.goto_next, { desc = "Go to next diagnostic" })
 set("n", "g[", diagn.goto_prev, { desc = "Go to previous diagnostic" })
 
 set("n", "<leader>tl", function()
-    local val = (
-        vim.api.nvim_get_option_value("colorcolumn", {}) == ""
-        and tostring(vim.api.nvim_get_option_value("textwidth", {}))
-        or ""
-    )
-    vim.api.nvim_set_option_value("colorcolumn", val, {})
-    vim.cmd("set list!")
+	local val = (
+		vim.api.nvim_get_option_value("colorcolumn", {}) == ""
+			and tostring(vim.api.nvim_get_option_value("textwidth", {}))
+		or ""
+	)
+	vim.api.nvim_set_option_value("colorcolumn", val, {})
+	vim.cmd("set list!")
 end, { desc = "Toggle whitespace and line length display" })
 
 set("n", "<leader>tf", function()
-    vim.g.autoformat = not vim.g.autoformat
-    vim.cmd('echo "Autoformat ' .. (vim.g.autoformat and "true" or "false") .. '"')
+	vim.g.autoformat = not vim.g.autoformat
+	vim.cmd('echo "Autoformat ' .. (vim.g.autoformat and "true" or "false") .. '"')
 end, { desc = "Toggle format on save" })

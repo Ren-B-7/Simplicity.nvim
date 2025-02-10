@@ -28,7 +28,7 @@ opt.swapfile = false
 opt.backup = false
 opt.undofile = true
 opt.modifiable = true
-opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+opt.undodir = os.getenv("HOME") .. "/.neovim/undodir"
 
 -- Set nvim clipboard and system clipboard
 opt.clipboard = "unnamedplus"
