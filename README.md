@@ -23,9 +23,7 @@ Large file support, faster file loading, completion, linting, tabs, intro window
 - [x] [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim) (Bridge for Mason and LSPConfig)  
 
 - [x] [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) (Completion framework for Neovim)  
-- [x] [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) (LSP source for nvim-cmp)  
-- [x] [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) (Buffer completion source for nvim-cmp)  
-- [x] [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline) (Command-line completion for nvim-cmp)  
+- [x] [blink-cmp](https://github.com/Saghen/blink.cmp) (Faster completion engine with lsp hooks)
 
 ### Formatting
 - [x] [conform.nvim](https://github.com/stevearc/conform.nvim) (Code formatting setup)  
