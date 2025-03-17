@@ -14,19 +14,24 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"nvim-lua/plenary.nvim",
 			"neovim/nvim-lspconfig",
+			"saghen/blink.cmp",
 		},
 		config = function()
 			require("mason").setup()
+
+			require("mason-lspconfig").setup({
+				ensure_installed = {},
+				automatic_installation = true,
+			})
+
+			local capabilities = require("blink.cmp").get_lsp_capabilities()
+
 			require("mason-lspconfig").setup_handlers({
 				function(server_name)
-					local capabilities = require("blink.cmp").get_lsp_capabilities()
 					require("lspconfig")[server_name].setup({ capabilities = capabilities })
 				end,
 			})
 
-			require("mason-lspconfig").setup({
-				automatic_installation = true,
-			})
 			vim.diagnostic.config({
 				signs = {
 					text = {
