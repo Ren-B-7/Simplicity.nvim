@@ -10,11 +10,6 @@ Large file support, faster file loading, completion, linting, tabs, intro window
 ## Plugin loader
 - [x] [lazy.nvim](https://github.com/folke/lazy.nvim) (Lazy loading plugin manager)  
 
-## File tree
-- [x] [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) (File explorer replacement for NERDTree)
-           - [nui.nvim](https://github.com/MunifTanjim/nui.nvim) (UI components library for Neovim plugins)
-           - [nvim-window-picker](https://github.com/s1n7ax/nvim-window-picker) (Simplified window selection interface)  
-
 ## Protocols
 - [x] [mason.nvim](https://github.com/williamboman/mason.nvim) (Package manager for LSP, DAP, linters, and formatters)  
 
@@ -34,19 +29,14 @@ Large file support, faster file loading, completion, linting, tabs, intro window
 - [x] [nvim-snippets](https://github.com/garymjr/nvim-snippets) (Customizable code snippets)  
 - [x] [friendly-snippets](https://github.com/rafamadriz/friendly-snippets) (Predefined snippets for multiple languages)  
 
-## Telescope
-- [x] [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) (Fuzzy finder and file searching)  
-           - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) (Utility functions for Neovim plugins)  
-- [x] [telescope-undo.nvim](https://github.com/debugloop/telescope-undo.nvim) (Enhanced undo tree exploration)  
-
 ## Quality of life plugins
 - [x] [mini-git](https://github.com/echasnovski/mini-git) (Minimalist Git utilities for Neovim)  
 - [x] [mini.comment](https://github.com/echasnovski/mini.comment) (Effortless commenting of code)  
 - [x] [mini.indentscope](https://github.com/echasnovski/mini.indentscope) (Highlights current code scope's indentation)
 - [x] [which-key.nvim](https://github.com/folke/which-key.nvim) (Displays keybindings as you type)
-- [x] [snacks.nvim](https://github.com/folke/snacks.nvim) (Large file support and improved loading)
+- [x] [snacks.nvim](https://github.com/folke/snacks.nvim) (Large file support and improved loading, file tree, indentscope and searching)
 
-## Position plugins\
+## Position plugins  
 - [x] [mini.statusline](https://github.com/echasnovski/mini.statusline) (Lightweight and customizable statusline)  
 - [x] [mini.tabline](https://github.com/echasnovski/mini.tabline) (Minimalist tabline management)  
 - [x] [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) (Git integration and signs in the editor)  
