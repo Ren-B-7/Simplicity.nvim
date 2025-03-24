@@ -11,12 +11,12 @@ Large file support, faster file loading, completion, linting, tabs, intro window
 - [x] [lazy.nvim](https://github.com/folke/lazy.nvim) (Lazy loading plugin manager)  
 
 ## Protocols
-- [x] [mason.nvim](https://github.com/williamboman/mason.nvim) (Package manager for LSP, DAP, linters, and formatters)  
+- [x] [mason.nvim](https://github.com/williamboman/mason.nvim) (Package manager for LSP, DAP, linters, and formatters)
+      - [x] [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) (Helpfull predefined lua functions)
 
 ### LSP
 - [x] [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) (Quick LSP configuration setup)  
 - [x] [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim) (Bridge for Mason and LSPConfig)  
-
 - [x] [blink-cmp](https://github.com/Saghen/blink.cmp) (Faster completion engine with lsp hooks)  
 
 ### Formatting
@@ -26,13 +26,11 @@ Large file support, faster file loading, completion, linting, tabs, intro window
 - [x] [nvim-lint](https://github.com/mfussenegger/nvim-lint) (Code linting integration)  
 
 ### Snippets
-- [x] [nvim-snippets](https://github.com/garymjr/nvim-snippets) (Customizable code snippets)  
 - [x] [friendly-snippets](https://github.com/rafamadriz/friendly-snippets) (Predefined snippets for multiple languages)  
 
 ## Quality of life plugins
 - [x] [mini-git](https://github.com/echasnovski/mini-git) (Minimalist Git utilities for Neovim)  
 - [x] [mini.comment](https://github.com/echasnovski/mini.comment) (Effortless commenting of code)  
-- [x] [mini.indentscope](https://github.com/echasnovski/mini.indentscope) (Highlights current code scope's indentation)
 - [x] [which-key.nvim](https://github.com/folke/which-key.nvim) (Displays keybindings as you type)
 - [x] [snacks.nvim](https://github.com/folke/snacks.nvim) (Large file support and improved loading, file tree, indentscope and searching)
 
