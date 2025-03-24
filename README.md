@@ -11,7 +11,7 @@ Large file support, faster file loading, completion, linting, tabs, intro window
 - [x] [lazy.nvim](https://github.com/folke/lazy.nvim) (Lazy loading plugin manager)  
 
 ## Protocols
-- [x] [mason.nvim](https://github.com/williamboman/mason.nvim) (Package manager for LSP, DAP, linters, and formatters)
+- [x] [mason.nvim](https://github.com/williamboman/mason.nvim) (Package manager for LSP, DAP, linters, and formatters)  
       - [x] [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) (Helpfull predefined lua functions)
 
 ### LSP
