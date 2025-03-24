@@ -32,7 +32,7 @@ Large file support, faster file loading, completion, linting, tabs, intro window
 - [x] [mini-git](https://github.com/echasnovski/mini-git) (Minimalist Git utilities for Neovim)  
 - [x] [mini.comment](https://github.com/echasnovski/mini.comment) (Effortless commenting of code)  
 - [x] [which-key.nvim](https://github.com/folke/which-key.nvim) (Displays keybindings as you type)
-- [x] [snacks.nvim](https://github.com/folke/snacks.nvim) (Large file support and improved loading, file tree, indentscope and searching)
+- [x] [snacks.nvim](https://github.com/folke/snacks.nvim) (Large file support, improved loading, file tree, indentscope and searching)
 
 ## Position plugins  
 - [x] [mini.statusline](https://github.com/echasnovski/mini.statusline) (Lightweight and customizable statusline)  
