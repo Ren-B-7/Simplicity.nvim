@@ -12,7 +12,7 @@ Large file support, faster file loading, completion, linting, tabs, intro window
 
 ## Protocols
 - [x] [mason.nvim](https://github.com/williamboman/mason.nvim) (Package manager for LSP, DAP, linters, and formatters)  
-      - [x] [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) (Helpfull predefined lua functions)
+      - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) (Helpfull predefined lua functions)
 
 ### LSP
 - [x] [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) (Quick LSP configuration setup)  
