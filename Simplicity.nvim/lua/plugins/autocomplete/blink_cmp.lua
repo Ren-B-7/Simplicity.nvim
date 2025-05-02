@@ -1,18 +1,18 @@
 return {
 	"saghen/blink.cmp",
 	lazy = true,
-	event = { "InsertEnter" },
-	dependencies = { "rafamadriz/friendly-snippets" },
+	event = { "BufAdd" },
+	dependencies = { "rafamadriz/friendly-snippets", "williamboman/mason-lspconfig.nvim" },
 
 	-- Use a release tag to download pre-built binaries
 	version = "*",
 	opts = {
 		completion = {
-			ghost_text = { enabled = true, show_with_menu = false },
-			menu = { auto_show = false },
+			ghost_text = { enabled = true, show_with_menu = true },
+			menu = { auto_show = true },
 			list = { selection = { preselect = true, auto_insert = true } },
 		},
-		-- Key mappings preset
+		-- Key mappings preselect
 		keymap = {
 			["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
 			["<C-e>"] = { "hide", "fallback" },
