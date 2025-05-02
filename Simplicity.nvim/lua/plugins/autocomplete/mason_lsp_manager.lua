@@ -1,24 +1,11 @@
 return {
 	{
 		"williamboman/mason-lspconfig.nvim",
-		dependencies = { { "williamboman/mason.nvim", lazy = true, cmd = { "Mason" } } },
+		dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
 		lazy = true,
 		opts = {},
-		config = true,
-	},
-	{
-		"williamboman/mason.nvim",
-		lazy = true,
-		cmd = { "Mason", "MasonUpdate", "MasonInstall", "MasonUninstall", "MasonLog" },
-		dependencies = {
-			"williamboman/mason-lspconfig.nvim",
-			"nvim-lua/plenary.nvim",
-			"neovim/nvim-lspconfig",
-			"saghen/blink.cmp",
-		},
+		event = { "BufAdd" },
 		config = function()
-			require("mason").setup()
-
 			require("mason-lspconfig").setup({
 				ensure_installed = {},
 				automatic_installation = true,
@@ -31,6 +18,15 @@ return {
 					require("lspconfig")[server_name].setup({ capabilities = capabilities })
 				end,
 			})
+		end,
+	},
+	{
+		"williamboman/mason.nvim",
+		lazy = true,
+		cmd = { "Mason", "MasonUpdate", "MasonInstall", "MasonUninstall", "MasonLog" },
+		event = { "UIEnter" },
+		config = function()
+			require("mason").setup()
 
 			vim.diagnostic.config({
 				signs = {
@@ -47,18 +43,6 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
-		dependencies = { "williamboman/mason-lspconfig.nvim" },
 		lazy = true,
-		setup = {
-			servers = {
-				basedpyright = {
-					settings = {
-						basedpyright = {
-							analysis = { typeCheckingMode = "standard" },
-						},
-					},
-				},
-			},
-		},
 	},
 }
