@@ -7,6 +7,10 @@ local diagn = vim.diagnostic
 
 set("n", "<C-s>", ":w <CR>", { desc = "Save the current selected file" })
 
+set({ "n", "t", "i", "v" }, "<C-e>", function()
+	vim.b.completion = not (vim.b.completion or false)
+end, { desc = "Toggles completion for Blink" })
+
 -- Moving and resizing windows
 set("n", "<C-Up>", ":resize -2<CR>", { desc = "Decrease window height" })
 set("n", "<C-Down>", ":resize +2<CR>", { desc = "Increase window height" })

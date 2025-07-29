@@ -150,14 +150,14 @@ return {
 		{
 			"<leader>e",
 			function()
-				Snacks.explorer()
+				Snacks.explorer({ layout = { layout = { position = "right" } } })
 			end,
 			desc = "File Explorer",
 		},
 		{
-			"<leader>f",
+			"<leader>fi",
 			function()
-				Snacks.explorer.reveal()
+				Snacks.explorer.reveal({ layout = { layout = { position = "right" } } })
 			end,
 			desc = "File Explorer",
 		},
@@ -172,7 +172,12 @@ return {
 		{
 			"<leader>fc",
 			function()
-				Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
+				Snacks.picker.files({
+					cwd = vim.fn.stdpath("config"),
+					show_empty = true,
+					hidden = true,
+					ignored = true,
+				})
 			end,
 			desc = "Find Config File",
 		},

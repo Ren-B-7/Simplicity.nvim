@@ -5,6 +5,7 @@ g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 g.mapleader = " "
 g.autoformat = true
+vim.b.completion = true
 
 opt.number = true
 opt.relativenumber = true
