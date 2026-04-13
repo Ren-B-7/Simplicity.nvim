@@ -25,7 +25,8 @@ return {
 					opts = vim.tbl_deep_extend("force", opts, custom_configs[server_name])
 				end
 
-				require("lspconfig")[server_name].setup(opts)
+				vim.lsp.config(server_name, opts)
+				vim.lsp.enable(server_name)
 			end
 		end,
 	},
