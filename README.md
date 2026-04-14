@@ -39,7 +39,7 @@ Large file support, faster file loading, completion, linting, tabs, intro window
 - [x] [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) (Git integration and signs in the editor)  
 
 ## Highlighting
-- [x] [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) (Better syntax highlighting and parsing)  
+- [x] [nvim-treesitter](https://github.com/romus204/tree-sitter-manager.nvim) (Better syntax highlighting and parsing)  
 
 # Keymaps?
 Keymaps will likely be added to the wiki later.  

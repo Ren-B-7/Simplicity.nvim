@@ -12,6 +12,7 @@ return {
 			quickfile = { enabled = true },
 			gitbrowse = { enabled = true },
 			indent = { enabled = true },
+			scope = { enabled = true },
 			scroll = { enabled = true },
 			explorer = { enabled = true },
 
