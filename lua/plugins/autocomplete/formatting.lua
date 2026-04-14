@@ -4,9 +4,11 @@ return {
 	config = function()
 		local conform = require("conform")
 
-		local format_root = vim.fs.find(function(name, path)
-			return name:match(".*%.clang-format$")
-		end, { limit = 1, type = "file", path = vim.fn.stdpath("config") })
+		local format_root = vim.fs.find({ ".clang-format" }, {
+			limit = 1,
+			type = "file",
+			path = vim.fn.stdpath("config"),
+		})
 
 		conform.setup({
 			formatters_by_ft = {
@@ -16,13 +18,13 @@ return {
 				c = { "clang-format" },
 				csharp = { "clang-format" },
 				cpp = { "clang-format" },
-				json = { "clang-format", "prettierd" },
+				json = { "clang-format", "prettier" },
 				java = { "clang-format" },
-				javascript = { "clang-format", "prettierd" },
-				html = { "prettierd" },
-				markdown = { "prettierd" },
-				typescript = { "prettierd" },
-				yaml = { "prettierd" },
+				javascript = { "clang-format", "prettier" },
+				html = { "prettier" },
+				markdown = { "prettier" },
+				typescript = { "prettier" },
+				yaml = { "prettier" },
 				lua = { "stylua" },
 			},
 			format_on_save = function()
@@ -38,10 +40,11 @@ return {
 			formatters = {
 				clang_format = {
 					prepend_args = function()
-						return table.insert(
-							format_root and { "--style-file:" .. format_root } or {},
-							"--fallback-style=webkit"
-						)
+						local args = { "--fallback-style=webkit" }
+						if format_root[1] then
+							table.insert(args, 1, "--style-file=" .. format_root[1])
+						end
+						return args
 					end,
 				},
 			},

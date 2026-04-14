@@ -3,7 +3,6 @@ local opt = vim.opt
 
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
-g.mapleader = " "
 g.autoformat = true
 vim.b.completion = true
 
@@ -29,12 +28,13 @@ opt.swapfile = false
 opt.backup = false
 opt.undofile = true
 opt.modifiable = true
-opt.undodir = os.getenv("HOME") .. "/.neovim/undodir"
+opt.undodir = vim.fn.stdpath("state") .. "/undo"
 
 -- Set nvim clipboard and system clipboard
 opt.clipboard = "unnamedplus"
 
-opt.scrolloff = 5
+opt.scrolloff = 8
+opt.cursorlineopt = "both"
 opt.updatetime = 100
 
 opt.termguicolors = true
@@ -43,4 +43,5 @@ opt.sessionoptions = {
 	"buffers",
 	"globals",
 	"resize",
+	"terminal",
 }
